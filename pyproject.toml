@@ -1,0 +1,82 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "unzipall"
+version = "1.0.0"
+description = "Universal archive extractor supporting 30+ formats including ZIP, RAR, 7Z, TAR, and many more"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "mricardo", email = "ricardo.lee.cm@gmail.com"}
+]
+keywords = ["archive", "extract", "zip", "rar", "7z", "tar", "compression", "unzip", "extractor"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Intended Audience :: System Administrators",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: System :: Archiving :: Compression",
+    "Topic :: Utilities",
+    "Operating System :: OS Independent",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "py7zr>=0.20.0",
+    "rarfile>=4.0",
+    "patool>=1.12.0",
+    "libarchive-c>=4.0",
+    "python-magic>=0.4.27",
+    "pycdlib>=1.13.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "black>=22.0",
+    "flake8>=5.0",
+    "mypy>=1.0",
+    "pre-commit>=2.20",
+]
+docs = [
+    "mkdocs>=1.4",
+    "mkdocs-material>=8.5",
+]
+
+[project.urls]
+Homepage = "https://github.com/mricardo888/unzipall"
+Repository = "https://github.com/mricardo888/unzipall"
+Documentation = "https://github.com/mricardo888/unzipall/blob/main/README.md"
+"Bug Tracker" = "https://github.com/mricardo888/unzipall/issues"
+
+[project.scripts]
+unzipall = "unzipall.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+unzipall = ["py.typed"]
+
+[tool.black]
+line-length = 88
+target-version = ['py38']
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+addopts = "--cov=unzipall --cov-report=html --cov-report=term"
