@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "unzipall"
-version = "1.0.0"
+version = "1.0.1"
 description = "Universal archive extractor supporting 30+ formats including ZIP, RAR, 7Z, TAR, and many more"
 readme = "README.md"
 license = {text = "MIT"}

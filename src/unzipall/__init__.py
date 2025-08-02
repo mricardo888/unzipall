@@ -1,9 +1,10 @@
 """Universal Archive Extractor Library."""
 
-from .core import ArchiveExtractor, ArchiveExtractionError
-from .exceptions import *
 from pathlib import Path
 from typing import Optional, Union, List
+
+from .core import ArchiveExtractor, ArchiveExtractionError
+from .exceptions import *
 
 __version__ = "1.0.0"
 __author__ = "mricardo"
@@ -11,6 +12,7 @@ __email__ = "ricardo.lee.cm@gmail.com"
 
 # Create a default instance for direct function calls
 _default_extractor = ArchiveExtractor()
+
 
 def extract(archive_path: Union[str, Path],
             extract_to: Union[str, Path, None] = None,
@@ -50,6 +52,7 @@ def extract(archive_path: Union[str, Path],
 
     return _default_extractor.extract(archive_path, extract_to, password)
 
+
 def list_supported_formats() -> List[str]:
     """
     Get a list of supported archive formats.
@@ -63,6 +66,7 @@ def list_supported_formats() -> List[str]:
         print(formats)
     """
     return _default_extractor.list_supported_formats()
+
 
 def is_supported(file_path: Union[str, Path]) -> bool:
     """
@@ -80,6 +84,7 @@ def is_supported(file_path: Union[str, Path]) -> bool:
             unzipall.extract('archive.zip')
     """
     return _default_extractor.is_supported(file_path)
+
 
 __all__ = [
     "ArchiveExtractor",

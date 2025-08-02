@@ -33,6 +33,7 @@ from typing import Optional, List, Union
 # Optional imports with fallbacks
 try:
     import libarchive
+
     HAS_LIBARCHIVE = True
 except (ImportError, OSError, TypeError) as e:
     HAS_LIBARCHIVE = False
@@ -40,6 +41,7 @@ except (ImportError, OSError, TypeError) as e:
 
 try:
     import magic
+
     HAS_MAGIC = True
 except ImportError:
     HAS_MAGIC = False
@@ -47,6 +49,7 @@ except ImportError:
 
 try:
     import patoolib
+
     HAS_PATOOL = True
 except ImportError:
     HAS_PATOOL = False
@@ -54,6 +57,7 @@ except ImportError:
 
 try:
     import py7zr
+
     HAS_PY7ZR = True
 except ImportError:
     HAS_PY7ZR = False
@@ -61,6 +65,7 @@ except ImportError:
 
 try:
     import pycdlib
+
     HAS_PYCDLIB = True
 except ImportError:
     HAS_PYCDLIB = False
@@ -68,12 +73,14 @@ except ImportError:
 
 try:
     import rarfile
+
     HAS_RARFILE = True
 except ImportError:
     HAS_RARFILE = False
     rarfile = None
 
 from .exceptions import *
+
 
 class ArchiveExtractor:
     """
