@@ -12,7 +12,11 @@ def main() -> int:
     parser = argparse.ArgumentParser(
         description="Universal archive extractor supporting 30+ formats"
     )
-    parser.add_argument("archive", help="Path to archive file")
+    parser.add_argument(
+        "archive",
+        nargs="?",  # Make archive optional
+        help="Path to archive file"
+    )
     parser.add_argument(
         "output",
         nargs="?",

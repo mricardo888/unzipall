@@ -210,22 +210,6 @@ except ArchiveExtractionError as e:
 
 Contributions are welcome! Please feel free to submit a Pull Request. For major changes, please open an issue first to discuss what you would like to change.
 
-### Development Setup
-
-```bash
-git clone https://github.com/yourusername/unzipall.git
-cd unzipall
-pip install -e ".[dev]"
-pre-commit install
-```
-
-### Running Tests
-
-```bash
-pytest
-pytest --cov=unzipall --cov-report=html
-```
-
 ## 📄 License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
