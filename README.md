@@ -3,7 +3,6 @@
 [![PyPI version](https://badge.fury.io/py/unzipall.svg)](https://badge.fury.io/py/unzipall)
 [![Python versions](https://img.shields.io/pypi/pyversions/unzipall.svg)](https://pypi.org/project/unzipall/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Tests](https://github.com/mricardo/unzipall/workflows/Tests/badge.svg)](https://github.com/mricardo/unzipall/actions)
 [![Coverage](https://codecov.io/gh/mricardo/unzipall/branch/main/graph/badge.svg)](https://codecov.io/gh/mricardo/unzipall)
 
 A comprehensive Python library for extracting archive files in **30+ formats** with a simple, unified API. No more juggling multiple extraction libraries or dealing with format-specific quirks.
